@@ -13,6 +13,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif|webp|svg)$/i,
+        type: "asset/resource"
+      },
+      {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
       },
