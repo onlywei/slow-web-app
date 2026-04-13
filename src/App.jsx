@@ -1,6 +1,5 @@
 import {
   AppShell,
-  Badge,
   Group,
   NavLink as MantineNavLink,
   Stack,
@@ -43,21 +42,16 @@ function ShellLayout() {
   return (
     <AppShell header={{ height: 64 }} navbar={{ width: 240, breakpoint: 0 }} padding="lg">
       <AppShell.Header px="lg">
-        <Group h="100%" justify="space-between">
-          <Group gap="sm">
-            <ThemeIcon size="lg" radius="md" variant="light">
-              <IconMessages size={18} />
-            </ThemeIcon>
-            <div>
-              <Title order={3}>Support Ops Console</Title>
-              <Text size="sm" c="dimmed">
-                Last synced 3m ago
-              </Text>
-            </div>
-          </Group>
-          <Badge color="orange" variant="light">
-            Deliberately under-optimized build
-          </Badge>
+        <Group h="100%" gap="sm">
+          <ThemeIcon size="lg" radius="md" variant="light">
+            <IconMessages size={18} />
+          </ThemeIcon>
+          <div>
+            <Title order={3}>Support Ops Console</Title>
+            <Text size="sm" c="dimmed">
+              Last synced 3m ago
+            </Text>
+          </div>
         </Group>
       </AppShell.Header>
 
