@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@mantine/core": "^9.0.2",
@@ -17,10 +18,14 @@
     "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.27.2",
     "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.4",
     "html-webpack-plugin": "^5.6.0",
     "style-loader": "^4.0.0",
+    "typescript": "^6.0.2",
     "webpack": "^5.99.8",
     "webpack-cli": "^7.0.2"
   }

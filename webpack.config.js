@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
   devtool: false,
-  entry: path.resolve(__dirname, "src/index.jsx"),
+  entry: path.resolve(__dirname, "src/index.tsx"),
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "app.js",
@@ -38,6 +38,9 @@ module.exports = {
                 {
                   runtime: "automatic"
                 }
+              ],
+              [
+                "@babel/preset-typescript"
               ]
             ]
           }
@@ -46,7 +49,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
   optimization: {
     minimize: false,

@@ -1,6 +1,13 @@
 import { Card, Stack, Table, Text, Title } from "@mantine/core";
 
-const queueRows = [
+type QueueRow = {
+  queue: string;
+  language: string;
+  staff: number;
+  backlog: number;
+};
+
+const queueRows: QueueRow[] = [
   { queue: "Trust & Safety", language: "EN", staff: 14, backlog: 203 },
   { queue: "Pro Support", language: "EN/DE", staff: 9, backlog: 64 },
   { queue: "Live Chat", language: "EN/JP", staff: 11, backlog: 119 },

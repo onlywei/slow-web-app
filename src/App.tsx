@@ -15,7 +15,15 @@ import { OverviewPage } from "./routes/OverviewPage";
 import { QueuesPage } from "./routes/QueuesPage";
 import { SettingsPage } from "./routes/SettingsPage";
 
-const navItems = [
+type NavItem = {
+  to: string;
+  label: string;
+  icon: typeof IconLayoutDashboard;
+};
+
+type AppNavLinkProps = NavItem;
+
+const navItems: NavItem[] = [
   { to: "/", label: "Overview", icon: IconLayoutDashboard },
   { to: "/queues", label: "Queues", icon: IconMessages },
   { to: "/agents", label: "Agents", icon: IconUsers },
@@ -23,7 +31,7 @@ const navItems = [
   { to: "/settings", label: "Settings", icon: IconPalette },
 ];
 
-function AppNavLink({ to, label, icon: Icon }) {
+function AppNavLink({ to, label, icon: Icon }: AppNavLinkProps) {
   const location = useLocation();
   const active = to === "/" ? location.pathname === "/" : location.pathname.startsWith(to);
 

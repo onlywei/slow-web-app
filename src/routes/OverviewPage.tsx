@@ -2,7 +2,14 @@ import { Badge, Card, Group, SimpleGrid, Stack, Table, Text, Title } from "@mant
 import { IconAlertCircle, IconClockHour4, IconMessages } from "@tabler/icons-react";
 import coolTechnoImage from "../cool_techno_image.png";
 
-const overviewRows = [
+type OverviewRow = {
+  queue: string;
+  region: string;
+  backlog: number;
+  risk: string;
+};
+
+const overviewRows: OverviewRow[] = [
   { queue: "Enterprise Onboarding", region: "AMER", backlog: 124, risk: "Elevated" },
   { queue: "Billing Escalations", region: "EMEA", backlog: 48, risk: "Stable" },
   { queue: "Developer Platform", region: "APAC", backlog: 89, risk: "High" },

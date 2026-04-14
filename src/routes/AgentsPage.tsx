@@ -1,6 +1,13 @@
 import { Avatar, Badge, Card, Group, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 
-const agentRows = [
+type AgentRow = {
+  name: string;
+  team: string;
+  timezone: string;
+  status: string;
+};
+
+const agentRows: AgentRow[] = [
   { name: "Talia Chen", team: "Escalations", timezone: "America/Los_Angeles", status: "Online" },
   { name: "Mateo Silva", team: "Billing", timezone: "America/Sao_Paulo", status: "Break" },
   { name: "Aiko Watanabe", team: "Platform", timezone: "Asia/Tokyo", status: "Online" },

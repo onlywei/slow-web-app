@@ -1,6 +1,12 @@
 import { Badge, Card, Group, Stack, Text, Title } from "@mantine/core";
 
-const incidentRows = [
+type IncidentRow = {
+  title: string;
+  severity: string;
+  owner: string;
+};
+
+const incidentRows: IncidentRow[] = [
   { title: "SLA breach risk in AMER onboarding", severity: "High", owner: "Ops Desk" },
   { title: "Billing queue staffing gap", severity: "Medium", owner: "EMEA Lead" },
   { title: "Escalation surge after status page incident", severity: "Critical", owner: "Incident Cmd" },
